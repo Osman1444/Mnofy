@@ -1,0 +1,120 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background-color: darkslategray;
+    background-image: linear-gradient(rgb(33, 56, 56), darkslategray);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cursive;
+    user-select: none;
+}
+
+main {
+    position: absolute;
+    bottom: -5rem;
+    width: 60%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+}
+main form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main input[type="text"] {
+    width: 65%;
+    height: 10%;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    border: 0px;
+    padding-left: 1rem;
+    padding-right: 6.5%;
+    box-shadow: 0.125rem 0.125rem 0.5rem rgba(199, 199, 199, 0.596);
+    transition: all 0.5s cubic-bezier(0.16, -0.92, 0.64, -1.69);
+    outline: none;
+    background-color: #ffffff18;
+    color: white;
+}
+
+main input[type="text"]:focus {
+    box-shadow: rgba(199, 199, 199, 0.596) 0.25rem 0.25rem 1rem;
+    background-color: #adadad4b;
+}
+
+main input[type="submit"] {
+    position: absolute;
+    right: 15%;
+    margin-top: 0.25%;
+    height: 9%;
+    width: 5%;
+    border: 0px;
+    border-radius: 50px;
+    background-color: #ffffff00;
+    padding-right: 10px;
+    background-image: url("images/تنزيل.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.1s cubic-bezier(0.16, -0.92, 0.64, -1.69);
+    outline: none;
+    filter: invert(1);
+}
+
+
+h1 {
+    color: rgba(240, 248, 255, 0.725);
+    position: absolute;
+    top: -2.5%;
+    font-size: 7rem;
+    transition: 0.5s ease;
+    border: 2px solid rgba(240, 248, 255, 0);
+    padding-bottom: 0.5rem;
+    /* border-radius: 4%; */
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+
+@keyframes borders{
+    0%{padding-left: 0rem; padding-right: 0rem; border-bottom-color: rgba(240, 248, 255, 0.2); border-bottom-style: dotted;}
+    50%{padding-left: 1.5rem; padding-right: 1.5rem; border-bottom-color: rgba(240, 248, 255, 0.514); border-bottom-style: dotted;}
+    100%{padding-left: 0rem; padding-right: 0rem; border-bottom-color: rgba(240, 248, 255, 0.2); border-bottom-style: dotted;}
+}
+
+
+
+@media (max-width: 800px) {
+    h1{
+        padding-top: 2.5rem;
+        font-size: 5.5rem;
+    }    
+    main{
+        width: 100%;
+    }
+    main input[type=submit]{
+        width: 5vh;
+    }
+}
+@media (min-width: 800px) {
+    main input[type="submit"]:hover {
+        background-color: rgba(188, 188, 188, 0.27);
+        transition: all 0.25s ease-out;
+    }
+    
+    main input[type="submit"]:active {
+        background-color: rgba(97, 97, 97, 0.334);
+    }
+
+    h1:hover {
+        border-bottom: 1.5rem solid rgba(240, 248, 255, 0.725);
+        /* border-top: 2px solid rgba(240, 248, 255, 0.725); */
+        animation: 2.5s borders cubic-bezier(0.35, 0.19, 0.36, -1.15) infinite;
+        transform: scale(1.2);
+    }
+}

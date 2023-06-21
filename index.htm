@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Source/Style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mnofy</title>
+</head>
+<body>
+    <h1>Mnofy</h1>
+    <main><form name="form1">
+        <input name="search" type="text" placeholder="Search in google" required autocomplete="off" oninvalid="this.setCustomValidity('أكتب حاجة يا ابن ###')" oninput="this.setCustomValidity('')"><input type="submit" value="" onclick="myFunction()">
+    </form></main>
+
+    <script>        
+    function myFunction() {
+        let srh = form1.search.value;
+        if (srh != ''){
+        window.open("https://www.google.com/search?q="+srh+"&oq=&gs_lcp=Cgdnd3Mtd2l6EAEYATIHCCMQ6gIQJzIHCCMQ6gIQJzIHCCMQ6gIQJzIHCCMQ6gIQJzIHCCMQ6gIQJzIHCCMQ6gIQJzIHCCMQ6gIQJzIHCCMQ6gIQJzIHCCMQ6gIQJzIHCCMQ6gIQJzoNCC4QsQMQgwEQsAMQDToHCAAQsAMQDToMCC4QyAMQsAMQDRgAOgUIIRCgAToHCCEQChCgAUoFCDwSATRKBAhBGAFKBAhGGABQtQJYtiBgoi9oBXAAeASAAeQEiAGAGJIBCTAuMi4yLjUtNJgBAKABAbABCsgBDMABAdoBBAgAGAg&sclient=gws-wiz");
+        }
+    }
+    </script>
+</body>
+</html>
